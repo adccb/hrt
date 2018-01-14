@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'date'
+
+today = Date.today
+start = Date.new(2017, 6, 12)
+days = (today - start).to_i
+
+puts 
+puts "you have been on hormone therapy for:"
+puts "  #{days / 365} years"
+puts "  #{days / 30} months"
+puts "  #{days % 30} days"
+
