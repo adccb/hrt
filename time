@@ -4,11 +4,14 @@ require 'date'
 
 today = Date.today
 start = Date.new(2017, 6, 12)
-days = (today - start).to_i
+
+days = (today - start).to_f
+months = (days / 30).round 2
+years = (months / 12).round 2
 
 puts 
 puts "you have been on hormone therapy for:"
-puts "  #{days / 365} years"
-puts "  #{days / 30} months"
-puts "  #{days % 30} days"
+puts "  #{days} days"
+puts "  #{months} thirty-day months"
+puts "  #{years} three-hundred-sixty-day years"
 
